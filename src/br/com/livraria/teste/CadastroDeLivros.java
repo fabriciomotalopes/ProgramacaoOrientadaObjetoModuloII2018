@@ -20,6 +20,7 @@ public class CadastroDeLivros {
         livro.valor = 59.90;
         livro.isbn = "000-00-00000-00-0";
         livro.autor = autor;
+        livro.aplicaDescontoDe(0.2);
 
         livro.mostrarDestalhes();
 
