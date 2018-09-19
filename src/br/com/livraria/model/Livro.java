@@ -8,12 +8,17 @@ public class Livro {
     
     public String nome;
     public String descricao;
-    public double valor;
+    private double valor;
     public String isbn;
     public Autor autor;
 
-    public void aplicaDescontoDe(double porcentagem) {
-        valor -= valor * porcentagem;
+    public boolean aplicaDescontoDe(double porcentagem) {
+        if(porcentagem > 0.3){
+            return false;
+        }
+        
+        this.valor -= this.valor * porcentagem;
+        return true;
     }
 
     public boolean temAutor() {
@@ -33,4 +38,13 @@ public class Livro {
         }
         System.out.println("--------------");
     }
+    
+    public double getValor(){
+        return valor;
+    }
+    
+    public void  setValor(double valor){
+        this.valor = valor;
+    }
+    
 }
